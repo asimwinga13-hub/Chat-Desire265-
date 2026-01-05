@@ -1,15 +1,15 @@
-// 🔹 Firebase configuration (replace with your Firebase values)
+// Firebase configuration
 const firebaseConfig = {
-  apiKey: "YOUR_KEY",
-  authDomain: "YOUR_DOMAIN",
-  databaseURL: "YOUR_DATABASE_URL",
-  projectId: "YOUR_PROJECT_ID"
+  apiKey: "AIzaSyCmPDdKvfFVnh1yhlWoBobtl4GtuT4q-Qg",
+  authDomain: "desire265-chat.firebaseapp.com",
+  databaseURL: "https://desire265-chat-default-rtdb.firebaseio.com/",
+  projectId: "desire265-chat"
 };
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-// Connect to database
+// Connect to Realtime Database
 const database = firebase.database();
 const messagesRef = database.ref("messages");
 
