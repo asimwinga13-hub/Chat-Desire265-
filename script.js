@@ -1,4 +1,4 @@
-// Firebase configuration
+// 🔹 Firebase configuration for your chat app
 const firebaseConfig = {
   apiKey: "AIzaSyCmPDdKvfFVnh1yhlWoBobtl4GtuT4q-Qg",
   authDomain: "desire265-chat.firebaseapp.com",
@@ -13,7 +13,7 @@ firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 const messagesRef = database.ref("messages");
 
-// Send message
+// Function to send a message
 function sendMessage() {
   const input = document.getElementById("messageInput");
 
@@ -26,12 +26,12 @@ function sendMessage() {
   }
 }
 
-// Receive messages
+// Listen for new messages
 messagesRef.on("child_added", function(snapshot) {
   const messages = document.getElementById("chatBox");
 
   const msg = document.createElement("div");
-  msg.className = "message me";
+  msg.className = "message me"; // all messages will use this style for now
   msg.innerText = snapshot.val().text;
 
   messages.appendChild(msg);
